@@ -19,12 +19,11 @@ session_start();
 
     <!-- jQuery ------------->
     <script src="js/Jquery.js"></script>
-    <!-- CSS only -->
 
     <!-- light-slider-js --------------->
     <script src="js/lightslider.js"></script>
 
-<!-- CSS only -->
+
 
     <!-- fav-icon -->
     <link rel="shortcut icon" href="images/fav-icon.png">
@@ -66,8 +65,42 @@ session_start();
             
             </ul>
 
+            <ul class="menu">
+                <li><a href="#">your order</a></li>
+                <?php
+                if(!isset($_SESSION['cid'])){  
+                    ?>
+                <li class="user"><a href="#" >sell with shop</a>
+                </li>
+                   <?php
+                }else{
+                     
+              ?>
+                     <li><a href="req_shop.php" >sell with shop</a>
+
+            <?php
+                }
+
+                ?>
+                <li><a href="#">rewards</a></li>
+                <li><a href="logout.php">log out</a></li>
             
-   
+            </ul>
+
+
+    
+
+
+
+
+
+
+
+
+
+            <a href="#" class="more" >
+                  <p  >More <i class="fas fa-chevron-circle-down"></i></p>
+                </a>
             <!-- right menue -->
             <div class="right-menue">
                 <!-- Shop -->
@@ -186,7 +219,3 @@ session_start();
 
 
     </div>
-    <!-- JavaScript Bundle with Popper -->
-
-</body>
-</html>
